@@ -40,8 +40,8 @@ def draw():
     background(135,206,250)
     
     x += 1.9
-    y += 0.9
-    z += 2
+    y += 0.8
+    z += 2.3
     a += 2
     b += 2.5
     c += 1.1
@@ -121,7 +121,7 @@ def draw():
     ellipse(c+75,720,3,3)
     ellipse(c+60,720,3,3)
     #mouth
-    triangle(c+55,730,c+65,740,c+75,730)
+    triangle(c+62,730,c+67,740,c+72,730)
     #legs
     fill(255,192,203)
     rect(c+30,750,10,45)
