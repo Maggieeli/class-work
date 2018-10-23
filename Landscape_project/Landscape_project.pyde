@@ -18,7 +18,7 @@ def draw():
     global c
     noStroke()
     
-    if x >= 12000:
+    if x >= 1200:
         x = 0
     if y >= 900:
         y = 0
@@ -30,21 +30,20 @@ def draw():
         b = 0
     if c >= 1200:
         c = 0
-    
-    light = color(135,206,250)
-    dark = color(0,0,128)
-    lerpColor(light,dark,0.5)
+    if x >= 200:
+        background(65,105,225)
+
     
     
     
     
     background(135,206,250)
     
-    x += 1.8
+    x += 1.9
     y += 0.9
     z += 2
-    a += 2.3
-    b += 2.8
+    a += 2
+    b += 2.5
     c += 1.1
     #sun
     fill(255,255,0)
@@ -121,6 +120,8 @@ def draw():
     fill(0)
     ellipse(c+75,720,3,3)
     ellipse(c+60,720,3,3)
+    #mouth
+    triangle(c+55,730,c+65,740,c+75,730)
     #legs
     fill(255,192,203)
     rect(c+30,750,10,45)
