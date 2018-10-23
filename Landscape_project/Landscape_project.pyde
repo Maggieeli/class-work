@@ -20,7 +20,7 @@ def draw():
     
     if x >= 1200:
         x = 0
-    if y >= 900:
+    if y >= 1000:
         y = 0
     if z >= 1200:
         z = 0
@@ -30,14 +30,16 @@ def draw():
         b = 0
     if c >= 1200:
         c = 0
-    if x >= 200:
-        background(65,105,225)
-
+    background(100,206,250)
     
-    
-    
-    
-    background(135,206,250)
+    if x >= 300:
+        background(37, 159, 237)
+    if x >= 600:
+        background(18, 119, 221)
+    if x >= 900:
+        background(0, 71, 171)
+    if x >= 1150:
+        background(29, 34, 90)
     
     x += 1.9
     y += 0.8
