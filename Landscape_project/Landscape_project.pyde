@@ -1,5 +1,5 @@
 def setup():
-    size(1154,1000)
+    size(1200,1000)
 #x,y,z for clouds and sun
 #a,b for sheep
 #c for dog    
@@ -18,19 +18,24 @@ def draw():
     global c
     noStroke()
     
-    if x >= 1150:
+    if x >= 12000:
         x = 0
     if y >= 900:
         y = 0
-    if z >= 1150:
+    if z >= 1200:
         z = 0
-    if a >= 1150:
+    if a >= 1200:
         a = 0
-    if b >= 1150:
+    if b >= 1200:
         b = 0
-    if c >= 1150:
+    if c >= 1200:
         c = 0
-  
+    
+    light = color(135,206,250)
+    dark = color(0,0,128)
+   
+      
+    lerpColor(light,dark,(x/100))
     background(135,206,250)
     
     x += 1.8
@@ -42,6 +47,8 @@ def draw():
     #sun
     fill(255,255,0)
     ellipse(x,y,100,100)
+    
+
     
     fill(255)
     #cloud 1
@@ -99,19 +106,29 @@ def draw():
     ellipse(b+25,720,70,70)
     ellipse(b-25,720,70,70)
 
-    #dog
-    fill(233,164,96)
+    #pig
+    fill(255,192,203)
     #body
     ellipse(c+10,740,100,60)
     #head
     ellipse(c+65,730,50,50)
+    #ear
     triangle(c+70,710,c+75,695,c+80,710)
     triangle(c+50,710,c+55,695,c+60,710)
+    #eyes
+    fill(0)
+    ellipse(c+75,720,3,3)
     #legs
+    fill(255,192,203)
     rect(c+30,750,10,45)
     rect(c-20,750,10,45)
+    
+    #barn
+    fill(178,34,34)
+    rect(950,600,350,400)
+
 
     
     
     fill(44,177,55)
-    rect(0,790,1154,400)
+    rect(0,790,1200,400)
